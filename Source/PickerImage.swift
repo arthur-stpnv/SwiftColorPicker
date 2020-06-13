@@ -95,7 +95,6 @@ public struct PickerImage {
     // MARK: Generating raw image data
 
     public mutating func writeColorData(hue: CGFloat, alpha: CGFloat) {
-        lockQueue.sync() {
             self.hue = hue
             self.alpha = alpha
 
@@ -133,7 +132,6 @@ public struct PickerImage {
 
                 currentBrightnessIndex += 1
             }
-        }
     }
 
     
